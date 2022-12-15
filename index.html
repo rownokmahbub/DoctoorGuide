@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctor Guide</title>
+    <link rel="icon" type="x-icon" href="favicon.ico">
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +18,13 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      html {
+  scroll-behavior: smooth;
+}
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
     <script>
       tailwind.config = {
         theme: {
@@ -67,9 +74,181 @@
   </head>
   <body style="font-family: 'Poppins', sans-serif">
     <!-- Navbar Start from Here -->
-   
+    <div class="bg-[#273240] fixed top-0 w-full z-40">
+      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="relative flex items-center justify-between">
+          <a href="#" aria-label="Company" title="Company" class="inline-flex items-center">
+            <img class="h-12" src="logofooter.svg" alt="">
+           
+          </a>
+          <ul class=" items-center hidden space-x-8 lg:flex">
+            <li>
+              
+  <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class=" text-base text-white font-medium  py-2.5 text-center inline-flex items-center " type="button">HOME <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+  <!-- Dropdown menu -->
+  <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-500 shadow ">
+      <ul class="py-1 text-sm  " aria-labelledby="multiLevelDropdownButton">
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+        </li>
+        <li>
+          <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center py-2 px-4 w-full hover:bg-primary">Dropdown<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+            <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-700 shadow ">
+              <ul class="py-1 text-sm " aria-labelledby="doubleDropdownButton">
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-primary">Overview</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-primary">My downloads</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-primary">Billing</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-primary">Rewards</a>
+                </li>
+              </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-primary">Earning</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+        </li>
+      </ul>
+  </div>
+  
+            </li>
+            <li>
+              
+              <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class=" text-base text-white font-medium  py-2.5 text-center inline-flex items-center " type="button">FEATURES <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-500 shadow ">
+                  <ul class="py-1 text-sm  " aria-labelledby="multiLevelDropdownButton">
+                    <li>
+                      <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                    </li>
+                    <li>
+                      <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center py-2 px-4 w-full hover:bg-primary">Dropdown<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                        <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-700 shadow ">
+                          <ul class="py-1 text-sm " aria-labelledby="doubleDropdownButton">
+                            <li>
+                              <a href="#" class="block py-2 px-4 hover:bg-primary">Overview</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block py-2 px-4 hover:bg-primary">My downloads</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block py-2 px-4 hover:bg-primary">Billing</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block py-2 px-4 hover:bg-primary">Rewards</a>
+                            </li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-4 hover:bg-primary">Earning</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                    </li>
+                  </ul>
+              </div>
+              
+                        </li>
+                        <li>
+              
+                          <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class=" text-base text-white font-medium  py-2.5 text-center inline-flex items-center " type="button">DEPARTMENTS <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                          <!-- Dropdown menu -->
+                          <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-500 shadow ">
+                              <ul class="py-1 text-sm  " aria-labelledby="multiLevelDropdownButton">
+                                <li>
+                                  <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                                </li>
+                                <li>
+                                  <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center py-2 px-4 w-full hover:bg-primary">Dropdown<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                                    <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-700 shadow ">
+                                      <ul class="py-1 text-sm " aria-labelledby="doubleDropdownButton">
+                                        <li>
+                                          <a href="#" class="block py-2 px-4 hover:bg-primary">Overview</a>
+                                        </li>
+                                        <li>
+                                          <a href="#" class="block py-2 px-4 hover:bg-primary">My downloads</a>
+                                        </li>
+                                        <li>
+                                          <a href="#" class="block py-2 px-4 hover:bg-primary">Billing</a>
+                                        </li>
+                                        <li>
+                                          <a href="#" class="block py-2 px-4 hover:bg-primary">Rewards</a>
+                                        </li>
+                                      </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <a href="#" class="block py-2 px-4 hover:bg-primary">Earning</a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                                </li>
+                              </ul>
+                          </div>
+                          
+                                    </li>
+                                    <li>
+              
+                                      <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class=" text-base text-white font-medium  py-2.5 text-center inline-flex items-center " type="button">EVENT <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                                      <!-- Dropdown menu -->
+                                      <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-500 shadow ">
+                                          <ul class="py-1 text-sm  " aria-labelledby="multiLevelDropdownButton">
+                                            <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                                            </li>
+                                            <li>
+                                              <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center py-2 px-4 w-full hover:bg-primary">Dropdown<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                                                <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-700 shadow ">
+                                                  <ul class="py-1 text-sm " aria-labelledby="doubleDropdownButton">
+                                                    <li>
+                                                      <a href="#" class="block py-2 px-4 hover:bg-primary">Overview</a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="#" class="block py-2 px-4 hover:bg-primary">My downloads</a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="#" class="block py-2 px-4 hover:bg-primary">Billing</a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="#" class="block py-2 px-4 hover:bg-primary">Rewards</a>
+                                                    </li>
+                                                  </ul>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-primary">Earning</a>
+                                            </li>
+                                            <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-primary">Dashboard</a>
+                                            </li>
+                                          </ul>
+                                      </div>
+                                      
+                                                </li>
+                                                <li class="font-medium">CONTACT US</li>
+          </ul>
+          <ul class=" items-center hidden space-x-8 lg:flex">
+            <li class="flex gap-4 items-center">
+            <button class="btn bg-primary border-none hover:bg-[#0089BA]">login</button>
+            <button class="btn bg-primary border-none hover:bg-[#0089BA]">Signup</button>
+            </li>
+          </ul>
+      
+        </div>
+      </div>
+    </div>
+ 
     <!-- Hero Section -->
-<div class="relative md:h-screen">
+<div class="relative md:h-screen my-16">
   <img class="absolute left-0 top-20" src="lefthero.png" alt="lefthero">
   <img class="absolute left-48 top-24" src="dot.png" alt="lefthero">
   <div class="flex container mx-auto justify-between items-center px-28">
@@ -138,7 +317,7 @@
         <p class="text-2xl font-semibold text-[#EA5262]">08:00</p>
         <div class="flex flex-col ">
           <p class="text-xl font-medium">General Practitioner</p>
-          <p class="text-base text-[#273240]">Dr. Robbert Algazali</p>
+          <p class="text-base text-white text-[#273240]">Dr. Robbert Algazali</p>
         
         </div>
       </div>
@@ -229,8 +408,34 @@
 
 </div>
 <!-- Rewards and rooms -->
-<div class="bg-[url('reward.png')]">
-
+<div class="w-full relative py-10">
+  <img class="w-full" src="reward.png" alt="">
+  <div class="absolute top-48 left-52 flex justify-between gap-28 items-center">
+      <div class="flex flex-col gap-3 text-white items-center">
+        <img class="h-14" src="mexpert.png" alt="medicalexpart">
+        <p class="font-semibold text-4xl">50</p>
+       <img src="line.svg" alt="">
+        <p class="font-semibold text-2xl">Medical Experts</p>
+      </div>
+      <div class="flex flex-col gap-3 text-white items-center">
+        <img class="h-14" src="room.png" alt="medicalexpart">
+        <p class="font-semibold text-4xl">50</p>
+       <img src="line.svg" alt="">
+        <p class="font-semibold text-2xl">Hospital Rooms</p>
+      </div>
+      <div class="flex flex-col gap-3 text-white items-center">
+        <img class="h-14" src="awards.png" alt="medicalexpart">
+        <p class="font-semibold text-4xl">50</p>
+       <img src="line.svg" alt="">
+        <p class="font-semibold text-2xl">Awards Win</p>
+      </div>
+      <div class="flex flex-col gap-3 text-white items-center">
+        <img class="h-14" src="smile.png" alt="medicalexpart">
+        <p class="font-semibold text-4xl">50</p>
+       <img src="line.svg" alt="">
+        <p class="font-semibold text-2xl">Happy Patients</p>
+      </div>
+  </div>
 </div>
 <!-- medical Expert -->
 <div class="container mx-auto ">
@@ -338,6 +543,66 @@
 </div>
 
 </div>
+
+<!-- feedback users -->
+<div class="container mx-auto my-10">
+  <div class="  relative py-10">
+    <img class="absolute inset-0 object-cover w-full h-full rounded-xl" src="feedback.svg" alt="">
+    <div class="relative container mx-auto">
+   <p class="text-white text-center font-semibold text-2xl">Patient Feedback</p>
+   <div class="carousel ">
+    <div id="slide1" class="carousel-item relative w-full">
+        <div class="flex gap-20 items-center px-28 mx-auto">
+          <img src="feedbackperson.png" alt="">
+          <div class="flex flex-col gap-2">
+            <p class="text-white mx-auto w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan duis posuere scelerisque curabitur lorem. Viverra at venenatis, arcu et. Elementum nunc eleifend ipsum mauris ut nunc aliquet nulla aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="text-white">TOM COOPPER</p>
+            <p class="text-primary">Managing Director Or Art</p>
+          </div>
+        </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 -left-6 -right-6 top-1/2">
+        <a href="#slide4" class="">   <img src="left.svg" alt=""></a> 
+        <a href="#slide2" class="">   <img src="right.svg" alt=""></a>
+      </div>
+    </div> 
+    <div id="slide2" class="carousel-item relative w-full">
+      <div class="flex gap-20 items-center px-28 mx-auto">
+        <img src="feedbackperson.png" alt="">
+        <div class="flex flex-col gap-2">
+          <p class="text-white mx-auto w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan duis posuere scelerisque curabitur lorem. Viverra at venenatis, arcu et. Elementum nunc eleifend ipsum mauris ut nunc aliquet nulla aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="text-white">TOM COOPPER</p>
+          <p class="text-primary">Managing Director Or Art</p>
+        </div>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide1" class="">  <img src="left.svg" alt=""></a> 
+        <a href="#slide3" class="">   <img src="right.svg" alt=""></a>
+      </div>
+    </div> 
+    <div id="slide3" class="carousel-item relative w-full">
+      <div class="flex gap-20 items-center px-28 mx-auto">
+        <img src="feedbackperson.png" alt="">
+        <div class="flex flex-col gap-2">
+          <p class="text-white mx-auto w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan duis posuere scelerisque curabitur lorem. Viverra at venenatis, arcu et. Elementum nunc eleifend ipsum mauris ut nunc aliquet nulla aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="text-white">TOM COOPPER</p>
+          <p class="text-primary">Managing Director Or Art</p>
+        </div>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide2" class="">
+          <img src="left.svg" alt="">
+        </a> 
+        <a href="#slide4" class="">
+          <img src="right.svg" alt="">
+        </a>
+      </div>
+    </div> 
+   
+  </div>
+    </div>
+  </div>
+</div>
+
 <!-- upcoming events -->
 <div class="container mx-auto py-10">
   <p class="text-3xl font-semibold text-[#273240] text-center">Upcoming Events
@@ -427,7 +692,7 @@
         <p class="text-white text-2xl font-semibold">Subscribe Now</p>
         <p class="text-white  ">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Ut elit tellus, luctus nec.</p>
         <div class="flex items-center gap-3 bg-white rounded-lg px-3 py-2">
-          <input class="px-2 py-3 focus:outline-none" type="text" placeholder="your email here">
+          <input class="px-2 py-3 focus:outline-none border-none" type="text" placeholder="your email here">
           <button class="btn bg-primary capitalize border-none hover:bg-[#0089BA]">Subscribe</button>
         </div>
     </div>
@@ -486,7 +751,7 @@
             </button>
           </div>
       </div>
-      <hr class=" border-gray-300 w-full pt-4">
+      <hr class=" border-gray-300 w-full pt-7">
       <div class="flex justify-between items-center container mx-auto py-7">
         <p class="text-white">Copyright © 2022. All Rights Reserved. Made with  by Solutya.</p>
         <div class="flex gap-4 items-center">
@@ -497,5 +762,55 @@
       </div>
   </div>
 
+<!-- Back to top button -->
+<button
+  type="button"
+  data-mdb-ripple="true"
+  data-mdb-ripple-color="light"
+  class="inline-block p-3 bg-primary text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-secondary hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out   bottom-5 right-5 fixed"
+  id="btn-back-to-top"
+>
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fas"
+    class="w-4 h-4"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 448 512"
+  >
+    <path
+      fill="currentColor"
+      d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  // Get the button
+let mybutton = document.getElementById('btn-back-to-top');
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener('click', backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+  <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
   </body>
 </html>
